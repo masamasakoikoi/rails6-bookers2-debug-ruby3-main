@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :ensure_correct_user, only: [:update]
+  before_action :ensure_correct_user, only: [:update,:edit]
 
   def index
     @users = User.all
+    @user = current_user
     @book = Book.new
   end
 
