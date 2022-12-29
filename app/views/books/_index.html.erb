@@ -14,9 +14,9 @@
           <%= image_tag book.user.get_profile_image, size:'50x50' %>
           <% end %>
         </td>
-        <td><%= link_to book_path(book) do %><% end %></td>
+        <td><%= link_to book_path(book) do %><%= book.title %><% end %></td>
         <td><%= book.body %></td>
+      <% end %>
       </tr>
-    <% end %>
   </tbody>
 </table>
