@@ -2,7 +2,7 @@
 <h2>Following Users</h2>
 <div class='container'>
   <div class='row'>
-      <div class='col-md-11'>
+      <!--<div class='col-md-11'>-->
         <table class='table'>
           <thead>
             <tr>
@@ -19,13 +19,13 @@
                 <td><%= user.name %></td>
                 <td>フォロー数:<%= user.followings.count %></td>
                 <td>フォロワー数:<%= user.followers.count %></td>
+            <% end %>
               </tr>
           </tbody>
         </table>
-            <% end %>
         <% else %>
          <p>ユーザーはいません</p>
         <% end %>
-      </div>
+      <!--</div>-->
   </div>
 </div>
