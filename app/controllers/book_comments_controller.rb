@@ -4,7 +4,7 @@ class BookCommentsController < ApplicationController
     comment = current_user.book_comments.new(book_comment_params)
     comment.book_id = book.id
     if comment.save
-      render :comments  #render先にjsファイルを指定
+      render :comments #render先にjsファイルを指定
     else
       render 'books/show'
     end
@@ -14,7 +14,7 @@ class BookCommentsController < ApplicationController
     BookComment.find(params[:id]).destroy
     #renderしたときに@postのデータがないので@postを定義
     @book = Book.find(params[:book_id])  
-    render :comments  #render先にjsファイルを指定
+    render :comments #render先にjsファイルを指定
   end
   
   private
